@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PSG Central Management</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind elements -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans - serif"],
+              mono: ["Bebas Neue", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- header part -->
+    <header class="container mx-auto relative">
+      <div>
+        <img class="w-full header-img" src="./images/header.jpg" alt="" />
+      </div>
+      <div class="absolute top-12 left-1/2 transform -translate-x-1/2">
+        <h1 class="text-5xl font-mono font-extrabold tracking-widest text-red-500 text-center">
+          PSG Central Management
+        </h1>
+      </div>
+      <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+        <p class="text-xl text-white text-center font-semibold">
+            This is an official site of PSG central management. In here PSG managers are discuss and calculate the price value of each player and total cost for them. It also includes the coach and team manager.
+        </p>
+      </div>
+    </header>
+    <!-- script links -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
