@@ -2,9 +2,13 @@ let players = [];
 
 function getName(node) {
     const name = node.parentNode.parentNode.children[0].innerText;
-    players.push(name);
-    console.log(players);
-    setName();
+    if (players.length < 5) {
+        players.push(name);
+        setName();
+    } else {
+        alert('You alrady selected five of them');
+    }
+    
 }
 function setName() {
     const ol = document.getElementById('ordered-list');
