@@ -8,7 +8,7 @@ function getName(node) {
         players.push(name);
         setName();
     } else {
-        alert('You already selected five of them');
+        alert('You have already selected five of them');
     }
     
 }
@@ -32,7 +32,7 @@ function onlyNumberInput(event) {
     if ((text >= 48 && text <= 57)|| text == 46){
         return true;
     } else {
-        alert('Please enter number')
+        alert('Please Enter Number')
         return false;
     } 
 }
@@ -52,9 +52,35 @@ function setText(inputId, value) {
     text.innerText = value;
 }
 
+// is NaN check
+function isItNaN(value) {
+    if (isNaN(value) == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 document.getElementById('calculate-btn').addEventListener('click', function () {
     const perPlayer = getValue('per-player');
-    const calculate = perPlayer * players.length;
-    setText('expenses', calculate);
+    if (isItNaN(perPlayer) == true) {
+        alert('Please Input Player Cost');
+    } else {
+        const calculate = perPlayer * players.length;
+        setText('expenses', calculate);
+    }   
+})
+
+document.getElementById('total-btn').addEventListener('click', function () {
+    const coach = getValue('coach');
+    const manager = getValue('manager');
+    if (isItNaN(coach) == true || isItNaN(manager) == true) {
+        alert('Fill Input Field First')
+    } else {
+        const playerCost = parseFloat(getText('expenses'))
+        const calculate = coach + manager + playerCost;
+        setText('total', calculate);
+    }
+    
 })
 
