@@ -3,6 +3,8 @@ let players = [];
 function getName(node) {
     const name = node.parentNode.parentNode.children[0].innerText;
     if (players.length < 5) {
+        node.setAttribute('disabled', true);
+        node.style.backgroundColor = 'gray';
         players.push(name);
         setName();
     } else {
