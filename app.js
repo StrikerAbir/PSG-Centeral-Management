@@ -8,7 +8,7 @@ function getName(node) {
         players.push(name);
         setName();
     } else {
-        alert('You alrady selected five of them');
+        alert('You already selected five of them');
     }
     
 }
@@ -26,7 +26,16 @@ function setName() {
     }
 }
 
-
+// only number type input ensure function
+function onlyNumberInput(event) {
+    const text = event.charCode;
+    if ((text >= 48 && text <= 57)|| text == 46){
+        return true;
+    } else {
+        alert('Please enter number')
+        return false;
+    } 
+}
 
 function getValue(inputId) {
     const value = document.getElementById(inputId).value
