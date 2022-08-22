@@ -52,6 +52,9 @@ function setText(inputId, value) {
     text.innerText = value;
 }
 
-document.getElementById('calculate').addEventListener('click', function () {
-    
+document.getElementById('calculate-btn').addEventListener('click', function () {
+    const perPlayer = getValue('per-player');
+    const calculate = perPlayer * players.length;
+    setText('expenses', calculate);
 })
+
