@@ -81,6 +81,5 @@ document.getElementById('total-btn').addEventListener('click', function () {
         const calculate = coach + manager + playerCost;
         setText('total', calculate);
     }
-    
 })
 
