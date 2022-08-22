@@ -25,3 +25,24 @@ function setName() {
         ol.appendChild(div)
     }
 }
+
+
+
+function getValue(inputId) {
+    const value = document.getElementById(inputId).value
+    return parseFloat(value);
+}
+
+function getText(inputId) {
+    const value = document.getElementById(inputId).innerText
+    return value;
+}
+
+function setText(inputId, value) {
+    const text = document.getElementById(inputId)
+    text.innerText = value;
+}
+
+document.getElementById('calculate').addEventListener('click', function () {
+    
+})
